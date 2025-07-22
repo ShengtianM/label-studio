@@ -40,7 +40,7 @@ export function InviteLink({
   return (
     <Modal
       ref={modalRef}
-      title="Invite people"
+      title="邀请成员"
       opened={opened}
       bareFooter={true}
       body={<InvitationModal />}
@@ -59,8 +59,7 @@ const InvitationModal = () => {
       <Input value={link} style={{ width: "100%" }} readOnly />
 
       <Description style={{ marginTop: 16 }}>
-        Invite people to join your Label Studio instance. People that you invite have full access to all of your
-        projects.{" "}
+        邀请成员加入您的 Label Studio 实例。您邀请的成员可以完全访问您的所有项目。{" "}
         <a
           href="https://labelstud.io/guide/signup.html"
           target="_blank"
@@ -69,9 +68,9 @@ const InvitationModal = () => {
             __lsa("docs.organization.add_people.learn_more", { href: "https://labelstud.io/guide/signup.html" })
           }
         >
-          Learn more
+          了解更多
         </a>
-        .
+        。
       </Description>
     </Block>
   );
@@ -85,12 +84,12 @@ const InvitationFooter = () => {
     <Space spread>
       <Space>
         <Button variant="secondary" style={{ width: 170 }} onClick={() => refetch()}>
-          Reset Link
+          重置链接
         </Button>
       </Space>
       <Space>
         <Button look="primary" style={{ width: 170 }} onClick={() => copyText(link!)}>
-          {copied ? "Copied!" : "Copy link"}
+          {copied ? "已复制" : "复制链接"}
         </Button>
       </Space>
     </Space>

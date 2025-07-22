@@ -4,10 +4,10 @@ const URL_CORS_DOCS = "https://labelstud.io/guide/storage.html#Troubleshoot-CORS
 const URL_TAGS_DOCS = "https://labelstud.io/tags";
 
 export default {
-  DONE: "Done!",
+  DONE: "已完成",
   NO_COMP_LEFT: "No more annotations",
-  NO_NEXT_TASK: "No More Tasks Left in Queue",
-  NO_ACCESS: "You don't have access to this task",
+  NO_NEXT_TASK: "队列中剩余任务为空",
+  NO_ACCESS: "你没有权限执行此任务",
 
   CONFIRM_TO_DELETE_ALL_REGIONS: "Please confirm you want to delete all labeled regions",
 

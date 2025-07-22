@@ -35,7 +35,7 @@ export const Actions = ({ store }) => {
           />
         </Tooltip>
       )}
-      <Tooltip alignment="top-left" title="Settings">
+      <Tooltip alignment="top-left" title="项目设置">
         <Button
           icon={<IconSettings />}
           type="text"

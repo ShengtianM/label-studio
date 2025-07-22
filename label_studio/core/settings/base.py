@@ -738,7 +738,7 @@ if get_env('STORAGE_TYPE') == 'gcs':
     GS_LOCATION = get_env('STORAGE_GCS_FOLDER', default='')
     GS_CUSTOM_ENDPOINT = get_env('STORAGE_GCS_ENDPOINT')
 
-CSRF_TRUSTED_ORIGINS = get_env('CSRF_TRUSTED_ORIGINS', [])
+CSRF_TRUSTED_ORIGINS = 'http://localhost:8010,http://localhost:8080' #get_env('CSRF_TRUSTED_ORIGINS', [])
 if CSRF_TRUSTED_ORIGINS:
     CSRF_TRUSTED_ORIGINS = CSRF_TRUSTED_ORIGINS.split(',')
 

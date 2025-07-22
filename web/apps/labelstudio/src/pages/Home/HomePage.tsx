@@ -16,35 +16,35 @@ const PROJECTS_TO_SHOW = 10;
 
 const resources = [
   {
-    title: "Documentation",
+    title: "文档",
     url: "https://labelstud.io/guide/",
   },
   {
-    title: "API Documentation",
+    title: "API 文档",
     url: "https://api.labelstud.io/api-reference/introduction/getting-started",
   },
   {
-    title: "Release Notes",
+    title: "发行日志",
     url: "https://labelstud.io/learn/categories/release-notes/",
   },
   {
-    title: "LabelStud.io Blog",
+    title: "博客",
     url: "https://labelstud.io/blog/",
   },
   {
-    title: "Slack Community",
+    title: "社区",
     url: "https://slack.labelstud.io",
   },
 ];
 
 const actions = [
   {
-    title: "Create Project",
+    title: "创建项目",
     icon: IconFolderAdd,
     type: "createProject",
   },
   {
-    title: "Invite People",
+    title: "邀请成员",
     icon: IconUserAdd,
     type: "invitePeople",
   },
@@ -84,8 +84,8 @@ export const HomePage: Page = () => {
       <div className="grid grid-cols-[minmax(0,1fr)_450px] gap-6">
         <section className="flex flex-col gap-6">
           <div className="flex flex-col gap-1">
-            <Heading size={1}>Welcome 👋</Heading>
-            <Sub>Let's get you started.</Sub>
+            <Heading size={1}>欢迎 👋</Heading>
+            <Sub>从这里开始</Sub>
           </div>
           <div className="flex justify-start gap-4">
             {actions.map((action) => {
@@ -106,9 +106,9 @@ export const HomePage: Page = () => {
             title={
               data && data?.count > 0 ? (
                 <>
-                  Recent Projects{" "}
+                  最近项目{" "}
                   <a href="/projects" className="text-lg font-normal hover:underline">
-                    View All
+                    查看全部
                   </a>
                 </>
               ) : null
@@ -119,7 +119,7 @@ export const HomePage: Page = () => {
                 <Spinner />
               </div>
             ) : isError ? (
-              <div className="h-64 flex justify-center items-center">can't load projects</div>
+              <div className="h-64 flex justify-center items-center">无法加载项目</div>
             ) : isSuccess && data.results.length === 0 ? (
               <div className="flex flex-col justify-center items-center border border-primary-border-subtle bg-primary-emphasis-subtle rounded-lg h-64">
                 <div
@@ -129,10 +129,10 @@ export const HomePage: Page = () => {
                 >
                   <IconFolderOpen />
                 </div>
-                <Heading size={2}>Create your first project</Heading>
-                <Sub>Import your data and set up the labeling interface to start annotating</Sub>
+                <Heading size={2}>创建第一个项目</Heading>
+                <Sub>导入数据并设置标注界面，以便开始进行标注</Sub>
                 <Button primary rawClassName="mt-4" onClick={() => setCreationDialogOpen(true)}>
-                  Create Project
+                  创建项目
                 </Button>
               </div>
             ) : isSuccess && data.results.length > 0 ? (
@@ -146,7 +146,7 @@ export const HomePage: Page = () => {
         </section>
         <section className="flex flex-col gap-6">
           <HeidiTips collection="projectSettings" />
-          <SimpleCard title="Resources" description="Learn, explore and get help" data-testid="resources-card">
+          <SimpleCard title="资源" description="学习、探索并寻求帮助" data-testid="resources-card">
             <ul>
               {resources.map((link) => {
                 return (
@@ -167,7 +167,7 @@ export const HomePage: Page = () => {
           </SimpleCard>
           <div className="flex gap-2 items-center">
             <IconHumanSignal />
-            <span className="text-neutral-content-subtle">Label Studio Version: Community</span>
+            <span className="text-neutral-content-subtle">版本: 社区版</span>
           </div>
         </section>
       </div>
@@ -177,7 +177,7 @@ export const HomePage: Page = () => {
   );
 };
 
-HomePage.title = "Home";
+HomePage.title = "首页";
 HomePage.path = "/";
 HomePage.exact = true;
 
@@ -205,7 +205,7 @@ function ProjectSimpleCard({
         <div className="flex flex-col gap-1">
           <span className="text-neutral-content">{project.title}</span>
           <div className="text-neutral-content-subtler text-sm">
-            {finished} of {total} Tasks ({total > 0 ? Math.round((finished / total) * 100) : 0}%)
+            {finished} / {total} 任务 ({total > 0 ? Math.round((finished / total) * 100) : 0}%)
           </div>
         </div>
         <div className="bg-neutral-surface rounded-full overflow-hidden w-full h-2 shadow-neutral-border-subtle shadow-border-1">

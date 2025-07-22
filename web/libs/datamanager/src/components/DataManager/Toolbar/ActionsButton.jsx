@@ -41,7 +41,7 @@ export const ActionsButton = injector(
         const dialog = Modal[dialogType] ?? Modal.confirm;
 
         dialog({
-          title: title ? title : destructive ? "Destructive action" : "Confirm action",
+          title: title ? title : destructive ? "危险操作" : "确认操作",
           body: buildDialogContent(text, form, formRef),
           buttonLook: destructive ? "destructive" : "primary",
           onOk() {
@@ -127,7 +127,7 @@ export const ActionsButton = injector(
     };
 
     const actionButtons = actions.map(ActionButton);
-    const recordTypeLabel = isFFLOPSE3 && store.SDK.type === "DE" ? "Record" : "Task";
+    const recordTypeLabel = isFFLOPSE3 && store.SDK.type === "DE" ? "记录" : "任务";
 
     return (
       <Dropdown.Trigger
@@ -136,7 +136,7 @@ export const ActionsButton = injector(
         disabled={!hasSelected}
       >
         <Button size={size} disabled={!hasSelected} {...rest}>
-          {selectedCount > 0 ? `${selectedCount} ${recordTypeLabel}${selectedCount > 1 ? "s" : ""}` : "Actions"}
+          {selectedCount > 0 ? `${selectedCount} ${recordTypeLabel}${selectedCount > 1 ? "s" : ""}` : "操作"}
           <IconChevronDown style={{ marginLeft: 4, marginRight: -7 }} />
         </Button>
       </Dropdown.Trigger>

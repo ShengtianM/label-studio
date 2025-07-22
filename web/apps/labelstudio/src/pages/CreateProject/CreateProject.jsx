@@ -28,7 +28,7 @@ const ProjectName = ({ name, setName, onSaveName, onSubmit, error, description, 
     >
       <div className="w-full flex flex-col gap-2">
         <label className="w-full" htmlFor="project_name">
-          Project Name
+          项目名称
         </label>
         <Input
           name="name"
@@ -42,12 +42,12 @@ const ProjectName = ({ name, setName, onSaveName, onSubmit, error, description, 
       </div>
       <div className="w-full flex flex-col gap-2">
         <label className="w-full" htmlFor="project_description">
-          Description
+          项目描述
         </label>
         <TextArea
           name="description"
           id="project_description"
-          placeholder="Optional description of your project"
+          placeholder="可选：项目的描述"
           rows="4"
           style={{ minHeight: 100 }}
           value={description}
@@ -58,12 +58,12 @@ const ProjectName = ({ name, setName, onSaveName, onSubmit, error, description, 
       {isFF(FF_LSDV_E_297) && (
         <div className="w-full flex flex-col gap-2">
           <label>
-            Workspace
+            工作空间
             <EnterpriseBadge className="ml-2" />
           </label>
-          <Select placeholder="Select an option" disabled options={[]} triggerClassName="!flex-1" />
+          <Select placeholder="请选择一个选项" disabled options={[]} triggerClassName="!flex-1" />
           <Caption>
-            Simplify project management by organizing projects into workspaces.{" "}
+            通过将项目组织到工作区中来简化项目管理。{" "}
             <a
               href={createURL(
                 "https://docs.humansignal.com/guide/manage_projects#Create-workspaces-to-organize-projects",
@@ -75,7 +75,7 @@ const ProjectName = ({ name, setName, onSaveName, onSubmit, error, description, 
               target="_blank"
               rel="noreferrer"
             >
-              Learn more
+              了解更多
             </a>
           </Caption>
           <HeidiTips collection="projectCreation" />
@@ -116,9 +116,9 @@ export const CreateProject = ({ onClose }) => {
   const rootClass = cn("create-project");
   const tabClass = rootClass.elem("tab");
   const steps = {
-    name: <span className={tabClass.mod({ disabled: !!error })}>Project Name</span>,
-    import: <span className={tabClass.mod({ disabled: uploadDisabled })}>Data Import</span>,
-    config: "Labeling Setup",
+    name: <span className={tabClass.mod({ disabled: !!error })}>项目信息</span>,
+    import: <span className={tabClass.mod({ disabled: uploadDisabled })}>数据导入</span>,
+    config: "标注设置",
   };
 
   // name intentionally skipped from deps:
@@ -197,12 +197,12 @@ export const CreateProject = ({ onClose }) => {
     <Modal onHide={onDelete} closeOnClickOutside={false} allowToInterceptEscape fullscreen visible bare>
       <div className={rootClass}>
         <Modal.Header>
-          <h1>Create Project</h1>
+          <h1>创建项目</h1>
           <ToggleItems items={steps} active={step} onSelect={setStep} />
 
           <Space>
             <Button look="danger" size="compact" onClick={onDelete} waiting={waiting}>
-              Delete
+              删除
             </Button>
             <Button
               look="primary"
@@ -211,7 +211,7 @@ export const CreateProject = ({ onClose }) => {
               waiting={waiting || uploading}
               disabled={!project || uploadDisabled || error}
             >
-              Save
+              保存
             </Button>
           </Space>
         </Modal.Header>

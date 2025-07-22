@@ -94,7 +94,7 @@ const HistoryTab: FC<any> = inject("store")(
         <Block name="history">
           <Elem name="section-tab">
             <Elem name="section-head">
-              Annotation History
+              标注历史
               <span>#{currentEntity.pk ?? currentEntity.id}</span>
             </Elem>
             <Elem name="section-content">
@@ -113,7 +113,7 @@ const InfoTab: FC<any> = inject("store")(
       <>
         <Block name="info">
           <Elem name="section-tab">
-            <Elem name="section-head">Selection Details</Elem>
+            <Elem name="section-head">选择详情</Elem>
             <RegionsPanel regions={selection} />
           </Elem>
         </Block>
@@ -130,7 +130,7 @@ const GeneralPanel: FC<any> = inject("store")(
       <>
         <Elem name="section">
           <Elem name="section-head">
-            Annotation History
+            标注历史
             <span>#{currentEntity.pk ?? currentEntity.id}</span>
           </Elem>
           <Elem name="section-content">
@@ -139,7 +139,7 @@ const GeneralPanel: FC<any> = inject("store")(
         </Elem>
         <Elem name="section">
           <Elem name="view-control">
-            <Elem name="section-head">Relations ({relationStore.size})</Elem>
+            <Elem name="section-head">关系 ({relationStore.size})</Elem>
             <RelationsControls relationStore={relationStore} />
           </Elem>
           <Elem name="section-content">
@@ -148,7 +148,7 @@ const GeneralPanel: FC<any> = inject("store")(
         </Elem>
         {store.hasInterface("annotations:comments") && store.commentStore.isCommentable && (
           <Elem name="section">
-            <Elem name="section-head">Comments</Elem>
+            <Elem name="section-head">评论</Elem>
             <Elem name="section-content">
               <CommentsComponent
                 annotationStore={store.annotationStore}

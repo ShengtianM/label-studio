@@ -1,6 +1,6 @@
 export const recipes = [
   {
-    title: "Bbox object detection",
+    title: "边界框目标检测",
     type: "community",
     group: "Computer Vision",
     image: "bbox.png",
@@ -16,7 +16,7 @@ export const recipes = [
 </View>`,
   },
   {
-    title: "Polygon labeling",
+    title: "多边形标注",
     type: "community",
     group: "Computer Vision",
     image: "polygon.png",

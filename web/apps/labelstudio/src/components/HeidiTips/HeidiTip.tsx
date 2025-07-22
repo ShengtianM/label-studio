@@ -51,9 +51,9 @@ export const HeidiTip: FC<HeidiTipProps> = ({ tip, onDismiss, onLinkClick }) => 
           <HeidiLink link={tip.link} onClick={onLinkClick} />
         </Elem>
       </Elem>
-      <Elem name="heidi">
+      {/* <Elem name="heidi">
         <HeidiSpeaking />
-      </Elem>
+      </Elem> */}
     </Block>
   );
 };

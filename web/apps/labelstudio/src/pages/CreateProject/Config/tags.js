@@ -3,23 +3,23 @@ const OBJECTS = {
     type: "Image",
     settings: {
       strokeWidth: {
-        title: "Width of region borders",
+        title: "区域边界的宽度",
         type: Number,
         param: ($obj, value) => $obj.$controls.forEach(($control) => $control.setAttribute("strokeWidth", value)),
         value: ($obj) => $obj.$controls[0]?.getAttribute("strokeWidth") ?? 1,
       },
       zoom: {
-        title: "Allow image zoom (ctrl+wheel)",
+        title: "允许图像缩放 (ctrl+wheel)",
         type: Boolean,
         param: "zoom",
       },
       zoomControl: {
-        title: "Show controls to zoom in and out",
+        title: "显示用于放大和缩小的控件",
         type: Boolean,
         param: "zoomControl",
       },
       rotateControl: {
-        title: "Show controls to rotate image",
+        title: "显示用于旋转图像的控件",
         type: Boolean,
         param: "rotateControl",
       },
@@ -29,7 +29,7 @@ const OBJECTS = {
     type: "Text",
     settings: {
       granularity: {
-        title: "Select text by words",
+        title: "按单词选择文本",
         type: Boolean,
         param: ($obj, value) =>
           value ? $obj.setAttribute("granularity", "word") : $obj.removeAttribute("granularity"),
@@ -68,7 +68,7 @@ const Labels = {
   type: "Labels",
   settings: {
     placeLabelsLeft: {
-      title: "Display labels:",
+      title: "显示标签：",
       type: ["bottom", "left", "right", "top"],
       control: true,
       when: ($tag) => $tag.$object.tagName !== "Video",
@@ -114,7 +114,7 @@ const Labels = {
       },
     },
     filter: {
-      title: "Add filter for long list of labels",
+      title: "为过长的标签列表添加筛选器",
       type: Boolean,
       control: true,
       param: ($obj, value) => {

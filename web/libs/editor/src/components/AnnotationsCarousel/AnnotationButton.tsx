@@ -137,23 +137,23 @@ export const AnnotationButton = observer(
           copyLink();
           dropdown?.close();
           toast.show({
-            message: "Annotation link copied to clipboard",
+            message: "注释链接已复制到剪贴板",
             type: ToastType.info,
           });
         }, [entity, copyLink]);
         const deleteAnnotation = useCallback(() => {
           clickHandler();
           confirm({
-            title: "Delete annotation?",
+            title: "删除注释",
             body: (
               <>
-                This will <strong>delete all existing regions</strong>. Are you sure you want to delete them?
+                该操作将<strong>删除所有已标注的区域</strong>。确认要删除吗?
                 <br />
-                This action cannot be undone.
+                该操作不可撤销。
               </>
             ),
             buttonLook: "destructive",
-            okText: "Delete",
+            okText: "确认删除",
             onOk: () => {
               entity.list.deleteAnnotation(entity);
             },
@@ -176,19 +176,19 @@ export const AnnotationButton = observer(
               enabled: showGroundTruth,
             },
             {
-              label: "Duplicate Annotation",
+              label: "重复注释",
               onClick: duplicateAnnotation,
               icon: <IconDuplicate width={20} height={20} />,
               enabled: showDuplicateAnnotation,
             },
             {
-              label: "Copy Annotation Link",
+              label: "复制注释链接",
               onClick: linkAnnotation,
               icon: <IconLink />,
               enabled: !isDraft && store.hasInterface("annotations:copy-link"),
             },
             {
-              label: "Delete Annotation",
+              label: "删除注释",
               onClick: deleteAnnotation,
               icon: <IconTrashRect />,
               separator: true,

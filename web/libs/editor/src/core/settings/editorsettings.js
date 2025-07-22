@@ -1,38 +1,38 @@
 export default {
   enableHotkeys: {
     newUI: {
-      title: "Labeling hotkeys",
-      description: "Enables quick selection of labels using hotkeys",
+      title: "标注快捷键",
+      description: "支持使用快捷键快速选择标签",
     },
-    description: "Enable labeling hotkeys",
+    description: "启用标签快捷键",
     onChangeEvent: "toggleHotkeys",
     defaultValue: true,
   },
   enableTooltips: {
     newUI: {
-      title: "Show hotkeys on tooltips",
-      description: "Displays keybindings on tools and actions tooltips",
+      title: "在工具提示中显示快捷键",
+      description: "在工具和操作的工具提示中显示快捷键信息",
     },
-    description: "Show hotkey tooltips",
+    description: "显示快捷键工具提示",
     onChangeEvent: "toggleTooltips",
     checked: "",
     defaultValue: false,
   },
   enableLabelTooltips: {
     newUI: {
-      title: "Show hotkeys on labels",
-      description: "Displays keybindings on labels",
+      title: "在标签上显示快捷键",
+      description: "在标签上显示快捷键信息",
     },
-    description: "Show labels hotkey tooltips",
+    description: "显示标签快捷键工具提示",
     onChangeEvent: "toggleLabelTooltips",
     defaultValue: true,
   },
   showLabels: {
     newUI: {
-      title: "Show region labels",
-      description: "Display region label names",
+      title: "显示区域标签",
+      description: "显示区域标签名称",
     },
-    description: "Show labels inside the regions",
+    description: "在区域内显示标签",
     onChangeEvent: "toggleShowLabels",
     defaultValue: false,
   },

@@ -118,14 +118,13 @@ const Webhook = () => {
         </Elem>
         <Elem name="footer-text">
           <p>
-            Webhooks allow external services to be notified when certain events happen. When the specified events occur,
-            a POST request is sent to each of the URLs you provide.
+            Webhook 允许在特定事件发生时通知外部服务。当指定的事件发生时，会向提供的每个 URL 发送一个 POST 请求。
           </p>
           <p>
             <a href="https://labelstud.io/guide/webhooks.html" target="_blank" rel="noreferrer">
-              Read more in the documentation
+              从文档中了解更多内容
             </a>
-            .
+            。
           </p>
         </Elem>
       </Elem>

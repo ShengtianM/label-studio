@@ -101,9 +101,9 @@ export const DataManagerPage = ({ ...props }) => {
       const isMissingProjectError = error?.startsWith("Project ID:");
 
       if (isMissingTaskError || isMissingProjectError) {
-        const message = `The ${
-          isMissingTaskError ? "task" : "project"
-        } you are trying to access does not exist or is no longer available.`;
+        const message = `尝试访问的 ${
+          isMissingTaskError ? "任务" : "项目"
+        } 不存在或已不再可用。`;
 
         toast.show({
           message,
@@ -206,9 +206,9 @@ export const DataManagerPage = ({ ...props }) => {
 
   return crashed ? (
     <Block name="crash">
-      <Elem name="info">Project was deleted or not yet created</Elem>
+      <Elem name="info">项目已被删除或尚未创建</Elem>
 
-      <Button to="/projects">Back to projects</Button>
+      <Button to="/projects">返回项目列表</Button>
     </Block>
   ) : (
     <>
@@ -255,7 +255,7 @@ DataManagerPage.context = ({ dmRef }) => {
 
     if (isLabelStream && show_instruction && expert_instruction) {
       modal({
-        title: "Labeling Instructions",
+        title: "标注说明",
         body: <div dangerouslySetInnerHTML={{ __html: expert_instruction }} />,
         style: { width: 680 },
       });
@@ -285,12 +285,12 @@ DataManagerPage.context = ({ dmRef }) => {
           size="compact"
           onClick={() => {
             modal({
-              title: "Instructions",
+              title: "说明",
               body: () => <div dangerouslySetInnerHTML={{ __html: project.expert_instruction }} />,
             });
           }}
         >
-          Instructions
+          说明
         </Button>
       )}
 

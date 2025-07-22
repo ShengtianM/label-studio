@@ -102,10 +102,10 @@ class App extends Component {
         }}
       >
         <Result status="success" title={getEnv(this.props.store).messages.NO_NEXT_TASK} />
-        <Block name="sub__result">All tasks in the queue have been completed</Block>
+        <Block name="sub__result">队列中的所有任务均已完成</Block>
         {store.taskHistory.length > 0 && (
           <Button onClick={(e) => store.prevTask(e, true)} look="outlined" style={{ margin: "16px 0" }}>
-            Go to Previous Task
+            转到上一个任务
           </Button>
         )}
       </Block>

@@ -46,12 +46,11 @@ export const PredictionsSettings = () => {
           <Elem name="title-block">
             <Elem name="title">Predictions List</Elem>
             <Description style={{ marginTop: "1em" }}>
-              List of predictions available in the project. Each card is associated with a separate model version. To
-              learn about how to import predictions,{" "}
+              项目中可用的预测模型/算法列表。每张卡片都与一个单独的模型版本相关联。要了解如何导入预测模型/算法，{" "}
               <a href="https://labelstud.io/guide/predictions.html" target="_blank" rel="noreferrer">
-                see&nbsp;the&nbsp;documentation
+                查阅文档
               </a>
-              .
+              。
             </Description>
           </Elem>
         )}
@@ -59,14 +58,14 @@ export const PredictionsSettings = () => {
         {loaded && versions.length === 0 && (
           <EmptyState
             icon={<IconPredictions />}
-            title="No predictions yet uploaded"
-            description="Predictions could be used to prelabel the data, or validate the model. You can upload and select predictions from multiple model versions. You can also connect live models in the Model tab."
+            title="尚未上传任何预测模型/算法"
+            description="预测模型/算法可用于对数据进行预标注，或验证模型。可以上传并从多个模型版本中选择预测模型/算法。还可以在 “模型” 选项卡中连接实时模型。"
             footer={
               <div>
-                Need help?
+                需要帮助？
                 <br />
                 <a href="https://labelstud.io/guide/predictions" target="_blank" rel="noreferrer">
-                  Learn more on how to upload predictions in our docs
+                  从文档中了解更多关于如何上传预测模型/算法的信息
                 </a>
               </div>
             }
@@ -81,5 +80,5 @@ export const PredictionsSettings = () => {
   );
 };
 
-PredictionsSettings.title = "Predictions";
+PredictionsSettings.title = "预测模型/算法";
 PredictionsSettings.path = "/predictions";

@@ -168,13 +168,13 @@ export function PersonalJWTToken() {
             </div>
           </div>
         ) : tokens.isError ? (
-          <div>Unable to load tokens list</div>
+          <div>无法加载 token 列表</div>
         ) : null}
       </div>
       <Tooltip title="You can only have one active token" disabled={!disallowAddingTokens}>
         <div style={{ width: "max-content" }}>
           <Button disabled={disallowAddingTokens || dialogOpened} onClick={openDialog}>
-            Create New Token
+            创建新的 Token
           </Button>
         </div>
       </Tooltip>

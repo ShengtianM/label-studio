@@ -23,20 +23,20 @@ const CustomBackendForm = ({ action, backend, project, onSubmit }) => {
       <Input type="hidden" name="project" value={project.id} />
 
       <Form.Row columnCount={1}>
-        <Input name="title" label="Name" placeholder="Enter a name" required />
+        <Input name="title" label="名称" placeholder="请输入名称" required />
       </Form.Row>
 
       <Form.Row columnCount={1}>
-        <Input name="url" label="Backend URL" required />
+        <Input name="url" label="后端 URL" required />
       </Form.Row>
 
       <Form.Row columnCount={2}>
         <Select
           name="auth_method"
-          label="Select authentication method"
+          label="认证方式"
           options={[
-            { label: "No Authentication", value: "NONE" },
-            { label: "Basic Authentication", value: "BASIC_AUTH" },
+            { label: "免认证", value: "NONE" },
+            { label: "基础认证", value: "BASIC_AUTH" },
           ]}
           value={selectedAuthMethod}
           onChange={setAuthMethod}
@@ -45,11 +45,11 @@ const CustomBackendForm = ({ action, backend, project, onSubmit }) => {
 
       {(backend?.auth_method === "BASIC_AUTH" || selectedAuthMethod === "BASIC_AUTH") && (
         <Form.Row columnCount={2}>
-          <Input name="basic_auth_user" label="Basic auth user" />
+          <Input name="basic_auth_user" label="认证用户" />
           {backend?.basic_auth_pass_is_set ? (
-            <Input name="basic_auth_pass" label="Basic auth pass" type="password" placeholder="********" />
+            <Input name="basic_auth_pass" label="认证密码" type="password" placeholder="********" />
           ) : (
-            <Input name="basic_auth_pass" label="Basic auth pass" type="password" />
+            <Input name="basic_auth_pass" label="认证密码" type="password" />
           )}
         </Form.Row>
       )}
@@ -57,7 +57,7 @@ const CustomBackendForm = ({ action, backend, project, onSubmit }) => {
       <Form.Row columnCount={1}>
         <TextArea
           name="extra_params"
-          label="Any extra params to pass during model connection"
+          label="在模型连接期间要传递的额外参数"
           style={{ minHeight: 120 }}
         />
       </Form.Row>
@@ -65,14 +65,14 @@ const CustomBackendForm = ({ action, backend, project, onSubmit }) => {
       <Form.Row columnCount={1}>
         <Toggle
           name="is_interactive"
-          label="Interactive preannotations"
-          description="If enabled some labeling tools will send requests to the ML Backend interactively during the annotation process."
+          label="交互式预标注"
+          description="如果启用，部分标注工具将在标注过程中以交互方式向机器学习后端发送请求。"
         />
       </Form.Row>
 
       <Form.Actions>
         <Button type="submit" look="primary" onClick={() => setMLError(null)}>
-          Validate and Save
+          验证并保存
         </Button>
       </Form.Actions>
 

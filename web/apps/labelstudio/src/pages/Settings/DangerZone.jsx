@@ -16,9 +16,9 @@ export const DangerZone = () => {
 
   const handleOnClick = (type) => () => {
     confirm({
-      title: "Action confirmation",
-      body: "You're about to delete all things. This action cannot be undone.",
-      okText: "Proceed",
+      title: "操作确认",
+      body: "你即将删除所有内容。此操作无法撤销。",
+      okText: "继续",
       buttonLook: "destructive",
       onOk: async () => {
         setProcessing(type);
@@ -58,35 +58,33 @@ export const DangerZone = () => {
       {
         type: "annotations",
         disabled: true, //&& !project.total_annotations_number,
-        label: `Delete ${project.total_annotations_number} Annotations`,
+        label: `删除 ${project.total_annotations_number} 标注注释`,
       },
       {
         type: "tasks",
         disabled: true, //&& !project.task_number,
-        label: `Delete ${project.task_number} Tasks`,
+        label: `删除 ${project.task_number} 任务`,
       },
       {
         type: "predictions",
         disabled: true, //&& !project.total_predictions_number,
-        label: `Delete ${project.total_predictions_number} Predictions`,
+        label: `删除 ${project.total_predictions_number} 预测算法/模型`,
       },
       {
         type: "reset_cache",
         help:
-          "Reset Cache may help in cases like if you are unable to modify the labeling configuration due " +
-          "to validation errors concerning existing labels, but you are confident that the labels don't exist. You can " +
-          "use this action to reset the cache and try again.",
-        label: "Reset Cache",
+          "在某些情况下，重置缓存可能会有所帮助，比如由于现有标签的验证错误而无法修改标签配置，但您确信这些标签并不存在。您可以使用此操作重置缓存，然后再次尝试。",
+        label: "重置缓存",
       },
       {
         type: "tabs",
-        help: "If the Data Manager is not loading, dropping all Data Manager tabs can help.",
-        label: "Drop All Tabs",
+        help: "如果数据管理器无法加载，关闭所有数据管理器选项卡可能会有所帮助。",
+        label: "删除所有选项卡",
       },
       {
         type: "project",
-        help: "Deleting a project removes all tasks, annotations, and project data from the database.",
-        label: "Delete Project",
+        help: "删除项目会从数据库中移除所有任务、标注注释和项目数据。",
+        label: "删除项目",
       },
     ],
     [project],
@@ -94,8 +92,8 @@ export const DangerZone = () => {
 
   return (
     <div className={cn("simple-settings")}>
-      <h1>Danger Zone</h1>
-      <Label description="Perform these actions at your own risk. Actions you take on this page can't be reverted. Make sure your data is backed up." />
+      <h1>危险区域</h1>
+      <Label description="执行这些操作有风险。在本页面执行的操作无法撤销。请确保已备份数据。" />
 
       {project.id ? (
         <div style={{ marginTop: 16 }}>
@@ -132,5 +130,5 @@ export const DangerZone = () => {
   );
 };
 
-DangerZone.title = "Danger Zone";
+DangerZone.title = "危险区域";
 DangerZone.path = "/danger-zone";

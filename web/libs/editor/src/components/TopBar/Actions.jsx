@@ -45,7 +45,7 @@ export const Actions = ({ store }) => {
       {!isPrediction && !isViewAll && store.hasInterface("edit-history") && <EditingHistory entity={entity} />}
 
       {!isViewAll && !isBulkMode && store.hasInterface("annotations:delete") && (
-        <Tooltip title="Delete annotation">
+        <Tooltip title="删除注释">
           <Button
             icon={<IconTrash />}
             look="danger"
@@ -53,10 +53,10 @@ export const Actions = ({ store }) => {
             aria-label="Delete"
             onClick={() => {
               confirm({
-                title: "Delete annotation",
-                body: "This action cannot be undone",
+                title: "删除注释",
+                body: "此操作无法撤销",
                 buttonLook: "destructive",
-                okText: "Proceed",
+                okText: "继续",
                 onOk: () => entity.list.deleteAnnotation(entity),
               });
             }}

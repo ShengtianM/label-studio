@@ -39,7 +39,7 @@ export const MachineLearningSettings = () => {
   const startTrainingModal = useCallback(
     (backend) => {
       const modalProps = {
-        title: "Start Model Training",
+        title: "开始模型训练",
         style: { width: 760 },
         closeOnClickOutside: true,
         body: <StartModelTraining backend={backend} />,
@@ -53,7 +53,7 @@ export const MachineLearningSettings = () => {
   const showRequestModal = useCallback(
     (backend) => {
       const modalProps = {
-        title: "Test Request",
+        title: "请求（Request）测试",
         style: { width: 760 },
         closeOnClickOutside: true,
         body: <TestRequest backend={backend} />,
@@ -102,19 +102,19 @@ export const MachineLearningSettings = () => {
         {loaded && backends.length === 0 && (
           <EmptyState
             icon={<IconModels />}
-            title="Let’s connect your first model"
-            description="Connect a machine learning model to generate predictions. These predictions can be compared side by side, used for efficient pre‒labeling and, to aid in active learning, directing users to the most impactful labeling tasks."
+            title="开始连接模型"
+            description="连接一个机器学习模型以生成预测结果。这些预测结果可以进行端到端比较，用于高效的预标注，并辅助用户主动学习，引导用户进行最有效的标注任务。"
             action={
               <Button primary onClick={() => showMLFormModal()}>
-                Connect Model
+                连接模型
               </Button>
             }
             footer={
               <div>
-                Need help?
+                需要帮助?
                 <br />
                 <a href="https://labelstud.io/guide/ml" target="_blank" rel="noreferrer">
-                  Learn more about connecting models in our docs
+                  在文档中了解更多关于连接模型的信息
                 </a>
               </div>
             }
@@ -131,18 +131,17 @@ export const MachineLearningSettings = () => {
         {backends.length > 0 && (
           <>
             <Description>
-              A connected model has been detected! If you wish to fetch predictions from this model, please follow these
-              steps:
+              已检测到一个已连接的模型！如果希望从该模型获取预测结果，请按照以下步骤操作：
               <br />
               <br />
-              1. Navigate to the <i>Data Manager</i>.<br />
-              2. Select the desired tasks.
+              1. 导航到 <i>Data Manager</i>。<br />
+              2. 选择所需的任务。
               <br />
-              3. Click on <i>Retrieve predictions</i> from the <i>Actions</i> menu.
+              3. 点击 <i>操作菜单</i> <i>检索预测结果</i>。
             </Description>
             <Description>
-              If you want to use the model predictions for prelabeling, please configure this in the{" "}
-              <NavLink to="annotation">Annotation settings</NavLink>.
+              如果想将模型预测结果用于预标注，请在此处进行配置{" "}
+              <NavLink to="annotation">标注注释设置</NavLink>.
             </Description>
           </>
         )}
@@ -159,8 +158,8 @@ export const MachineLearningSettings = () => {
 
               <div>
                 <Toggle
-                  label="Start model training on annotation submission"
-                  description="This option will send a request to /train with information about annotations. You can use this to enable an Active Learning loop. You can also manually start training through model menu in its card."
+                  label="开始在标注注释提交数据上进行模型训练"
+                  description="此选项将向 /train 接口发送一个包含注释信息的请求。可以使用此功能来启用主动学习循环。也可以通过模型卡片中的模型菜单手动启动训练。"
                   name="start_training_on_annotation_update"
                 />
               </div>
@@ -170,10 +169,10 @@ export const MachineLearningSettings = () => {
           {backends.length > 0 && (
             <Form.Actions>
               <Form.Indicator>
-                <span case="success">Saved!</span>
+                <span case="success">已保存</span>
               </Form.Indicator>
               <Button type="submit" look="primary" style={{ width: 120 }}>
-                Save
+                保存
               </Button>
             </Form.Actions>
           )}
@@ -183,5 +182,5 @@ export const MachineLearningSettings = () => {
   );
 };
 
-MachineLearningSettings.title = "Model";
+MachineLearningSettings.title = "模型连接";
 MachineLearningSettings.path = "/ml";

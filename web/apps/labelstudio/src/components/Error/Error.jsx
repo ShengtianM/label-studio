@@ -88,7 +88,7 @@ export const ErrorWrapper = ({
       <Elem name="actions">
         <Space spread>
           <Elem tag={Button} name="action-slack" target="_blank" icon={<IconSlack />} href={SLACK_INVITE_URL}>
-            Ask on Slack
+            在社区提问
           </Elem>
 
           <Space size="small">
@@ -97,8 +97,8 @@ export const ErrorWrapper = ({
                 {copied ? "Copied" : "Copy Stacktrace"}
               </Button>
             )}
-            {onGoBack && <Button onClick={onGoBack}>Go Back</Button>}
-            {onReload && <Button onClick={onReload}>Reload</Button>}
+            {onGoBack && <Button onClick={onGoBack}>返回</Button>}
+            {onReload && <Button onClick={onReload}>刷新</Button>}
           </Space>
         </Space>
       </Elem>

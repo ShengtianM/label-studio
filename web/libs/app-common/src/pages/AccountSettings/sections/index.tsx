@@ -17,29 +17,29 @@ type SectionType = {
 export const accountSettingsSections = (settings: AuthTokenSettings): SectionType[] => {
   return [
     {
-      title: "Personal Info",
+      title: "个人信息",
       id: "personal-info",
       component: PersonalInfo,
     },
+    // {
+    //   title: "邮件偏好设置",
+    //   id: "email-preferences",
+    //   component: EmailPreferences,
+    // },
     {
-      title: "Email Preferences",
-      id: "email-preferences",
-      component: EmailPreferences,
-    },
-    {
-      title: "Membership Info",
+      title: "会员信息",
       id: "membership-info",
       component: MembershipInfo,
     },
     settings.api_tokens_enabled &&
       ff.isActive(ff.FF_AUTH_TOKENS) && {
-        title: "Personal Access Token",
+        title: "个人访问 Token",
         id: "personal-access-token",
         component: PersonalJWTToken,
         description: PersonalAccessTokenDescription,
       },
     settings.legacy_api_tokens_enabled && {
-      title: ff.isActive(ff.FF_AUTH_TOKENS) ? "Legacy Token" : "Access Token",
+      title: ff.isActive(ff.FF_AUTH_TOKENS) ? "旧版本 Token" : "访问 Token",
       id: "legacy-token",
       component: PersonalAccessToken,
       description: PersonalAccessTokenDescription,

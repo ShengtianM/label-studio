@@ -135,13 +135,13 @@ const LayoutSettings = observer(({ store }) => {
             setTimeout(triggerResizeEvent);
           }}
         >
-          Move sidepanel to the bottom
+          将侧边栏移动到底部
         </Checkbox>
       </Elem>
 
       <Elem name="field">
         <Checkbox checked={store.settings.displayLabelsByDefault} onChange={store.settings.toggleSidepanelModel}>
-          Display Labels by default in Results panel
+          在结果面板中默认显示标签
         </Checkbox>
       </Elem>
 
@@ -153,7 +153,7 @@ const LayoutSettings = observer(({ store }) => {
             store.settings.toggleAnnotationsPanel();
           }}
         >
-          Show Annotations panel
+          显示标注面板
         </Checkbox>
       </Elem>
 
@@ -165,7 +165,7 @@ const LayoutSettings = observer(({ store }) => {
             store.settings.togglePredictionsPanel();
           }}
         >
-          Show Predictions panel
+          显示预测面板
         </Checkbox>
       </Elem>
 
@@ -199,12 +199,12 @@ const DEFAULT_ACTIVE = Object.keys(Settings)[0];
 const DEFAULT_MODAL_SETTINGS = isFF(FF_DEV_3873)
   ? {
       name: "settings-modal",
-      title: "Labeling Interface Settings",
+      title: "标注接口设置",
       closeIcon: <IconClose />,
     }
   : {
       name: "settings-modal-old",
-      title: "Settings",
+      title: "设置",
       bodyStyle: { paddingTop: "0" },
     };
 

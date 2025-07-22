@@ -54,7 +54,7 @@ export default class ErrorBoundary extends Component {
         <Modal onHide={() => location.reload()} style={{ width: "60vw" }} visible bare>
           <div style={{ padding: 40 }}>
             <ErrorWrapper
-              title="Runtime error"
+              title="运行出错"
               message={error}
               stacktrace={stacktrace}
               onGoBack={goBack}
@@ -84,5 +84,5 @@ export default class ErrorBoundary extends Component {
 export const ErrorUI = () => {
   const context = React.useContext(ErrorContext);
 
-  return context.hasError && <div className="error">Error occurred</div>;
+  return context.hasError && <div className="error">发生错误</div>;
 };

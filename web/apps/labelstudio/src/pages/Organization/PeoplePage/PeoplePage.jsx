@@ -31,8 +31,7 @@ const InvitationModal = ({ link }) => {
       />
 
       <Description style={{ marginTop: 16 }}>
-        Invite people to join your Label Studio instance. People that you invite have full access to all of your
-        projects.{" "}
+        邀请成员加入您的 Label Studio 实例。您邀请的成员可以完全访问您的所有项目。{" "}
         <a
           href="https://labelstud.io/guide/signup.html"
           target="_blank"
@@ -41,9 +40,9 @@ const InvitationModal = ({ link }) => {
             __lsa("docs.organization.add_people.learn_more", { href: "https://labelstud.io/guide/signup.html" })
           }
         >
-          Learn more
+          了解更多
         </a>
-        .
+        。
       </Description>
     </Block>
   );
@@ -71,7 +70,7 @@ export const PeoplePage = () => {
 
   const apiTokensSettingsModalProps = useMemo(
     () => ({
-      title: "API Token Settings",
+      title: "API Token 设置",
       style: { width: 480 },
       body: () => (
         <TokenSettingsModal
@@ -101,9 +100,9 @@ export const PeoplePage = () => {
           <Space />
 
           <Space>
-            {isFF(FF_AUTH_TOKENS) && <Button onClick={showApiTokenSettingsModal}>API Tokens Settings</Button>}
+            {isFF(FF_AUTH_TOKENS) && <Button onClick={showApiTokenSettingsModal}>API Tokens 设置</Button>}
             <Button icon={<IconPlus />} primary onClick={() => setInvitationOpen(true)}>
-              Add People
+              添加成员
             </Button>
           </Space>
         </Space>

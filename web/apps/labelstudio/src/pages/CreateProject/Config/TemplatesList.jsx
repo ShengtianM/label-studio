@@ -9,7 +9,7 @@ const listClass = cn("templates-list");
 
 const Arrow = () => (
   <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <title>Arrow Icon</title>
+    <title>箭头图标</title>
     <path opacity="0.9" d="M2 10L6 6L2 2" stroke="currentColor" strokeWidth="2" strokeLinecap="square" />
   </svg>
 );
@@ -71,7 +71,7 @@ export const TemplatesList = ({ selectedGroup, selectedRecipe, onCustomTemplate,
           ))}
         </ul>
         <button type="button" onClick={onCustomTemplate} className={listClass.elem("custom-template")}>
-          Custom template
+          自定义模板
         </button>
       </aside>
       <main>
@@ -81,11 +81,11 @@ export const TemplatesList = ({ selectedGroup, selectedRecipe, onCustomTemplate,
       <footer className="flex items-center justify-center gap-1">
         <IconInfo className={listClass.elem("info-icon")} width="20" height="20" />
         <span>
-          See the documentation to{" "}
+          查看文档来了解如何{" "}
           <a href="https://labelstud.io/guide" target="_blank" rel="noreferrer">
-            contribute a template
+            贡献一个模板
           </a>
-          .
+          。
         </span>
       </footer>
     </div>

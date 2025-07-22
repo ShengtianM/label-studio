@@ -88,15 +88,15 @@ const Footer = () => {
     <Modal.Footer className="import-footer">
       <IconInfo className={scn(importClass.elem("info-icon"), "mr-1")} width="20" height="20" />
       <span>
-        See the&nbsp;documentation to{" "}
+        请参阅相关文档以{" "}
         <a target="_blank" href="https://labelstud.io/guide/predictions.html" rel="noreferrer">
-          import preannotated data
+          导入预先标注的数据
         </a>{" "}
-        or&nbsp;to{" "}
+        或者{" "}
         <a target="_blank" href="https://labelstud.io/guide/storage.html" rel="noreferrer">
-          sync data from a&nbsp;database or&nbsp;cloud storage
+          从数据库或云存储同步数据
         </a>
-        .
+        。
       </span>
     </Modal.Footer>
   );
@@ -228,7 +228,7 @@ export const ImportPage = ({
     console.error(err);
     // @todo workaround for error about input size in a wrong html format
     if (typeof err === "string" && err.includes("RequestDataTooBig")) {
-      const message = "Imported file is too big";
+      const message = "导入文件过大";
       const extra = err.match(/"exception_value">(.*)<\/pre>/)?.[1];
 
       err = { message, extra };
@@ -353,19 +353,19 @@ export const ImportPage = ({
 
       <header className="flex gap-4">
         <form className={`${importClass.elem("url-form")} inline-flex`} method="POST" onSubmit={onLoadURL}>
-          <Input placeholder="Dataset URL" name="url" ref={urlRef} style={{ height: 40 }} />
+          <Input placeholder="数据集网址" name="url" ref={urlRef} style={{ height: 40 }} />
           <Button type="submit" look="primary">
-            Add URL
+            添加网址URL
           </Button>
         </form>
-        <span>or</span>
+        <span>或</span>
         <Button
           type="button"
           onClick={() => document.getElementById("file-input").click()}
           className={importClass.elem("upload-button")}
         >
           <IconUpload width="16" height="16" className={importClass.elem("upload-icon")} />
-          Upload {files.uploaded.length ? "More " : ""}Files
+          上传{files.uploaded.length ? "更多" : ""}文件
         </Button>
         {ff.isActive(ff.FF_SAMPLE_DATASETS) && (
           <SampleDatasetSelect samples={samples} sample={sample} onSampleApplied={onSampleDatasetSelect} />
@@ -373,16 +373,16 @@ export const ImportPage = ({
         <div
           className={importClass.elem("csv-handling").mod({ highlighted: highlightCsvHandling, hidden: !csvHandling })}
         >
-          <span>Treat CSV/TSV as</span>
+          <span>将 CSV/TSV 视为</span>
           <label>
-            <input {...csvProps} value="tasks" checked={csvHandling === "tasks"} /> List of tasks
+            <input {...csvProps} value="tasks" checked={csvHandling === "tasks"} /> 任务列表
           </label>
           <label>
-            <input {...csvProps} value="ts" checked={csvHandling === "ts"} /> Time Series or Whole Text File
+            <input {...csvProps} value="ts" checked={csvHandling === "ts"} /> 时间序列或整个文本文件
           </label>
         </div>
         <div className={importClass.elem("status")}>
-          {files.uploaded.length ? `${files.uploaded.length} files uploaded` : ""}
+          {files.uploaded.length ? `${files.uploaded.length} 文件已上传` : ""}
         </div>
       </header>
 
@@ -396,38 +396,38 @@ export const ImportPage = ({
                 <label htmlFor="file-input">
                   <div className={dropzoneClass.elem("content")}>
                     <header>
-                      Drag & drop files here
+                      拖放文件到此处
                       <br />
-                      or click to browse
+                      或 点击浏览
                     </header>
                     <IconFileUpload height="64" className={dropzoneClass.elem("icon")} />
                     <dl>
-                      <dt>Text</dt>
+                      <dt>文本</dt>
                       <dd>{supportedExtensions.text.join(", ")}</dd>
-                      <dt>Audio</dt>
+                      <dt>音频</dt>
                       <dd>{supportedExtensions.audio.join(", ")}</dd>
-                      <dt>Video</dt>
+                      <dt>视频</dt>
                       <dd>mpeg4/H.264 webp, webm* {/* Keep in sync with supportedExtensions.video */}</dd>
-                      <dt>Images</dt>
+                      <dt>图片</dt>
                       <dd>{supportedExtensions.image.join(", ")}</dd>
                       <dt>HTML</dt>
                       <dd>{supportedExtensions.html.join(", ")}</dd>
-                      <dt>Time Series</dt>
+                      <dt>时间序列</dt>
                       <dd>{supportedExtensions.timeSeries.join(", ")}</dd>
-                      <dt>Common Formats</dt>
+                      <dt>常见格式</dt>
                       <dd>{supportedExtensions.common.join(", ")}</dd>
                     </dl>
                     <b>
-                      * – Support depends on the browser
-                      <br />* – Direct media uploads have{" "}
+                      * – 支持情况取决于浏览器
+                      <br />* – 直接上传媒体文件有{" "}
                       <a href="https://labelstud.io/guide/tasks.html#Import-data-from-the-Label-Studio-UI">
-                        limitations
+                        限制
                       </a>{" "}
-                      and we strongly recommend using{" "}
+                      并且我们强烈建议使用{" "}
                       <a href="https://labelstud.io/guide/storage.html" target="_blank" rel="noreferrer">
-                        Cloud Storage
+                        云存储
                       </a>{" "}
-                      instead
+                      代替直接上传
                     </b>
                   </div>
                 </label>
@@ -444,7 +444,7 @@ export const ImportPage = ({
                           <div className="flex items-center gap-2">
                             {sample.title}
                             <Badge variant="info" className="h-5 text-xs rounded-sm">
-                              Sample
+                              示例数据
                             </Badge>
                           </div>
                         </td>
@@ -497,21 +497,21 @@ export const ImportPage = ({
                       <Spinner className="h-6 w-6" />
                     </div>
                   ) : sampleConfig.isError ? (
-                    <div className="w-full pt-4 text-lg text-negative-content">Unable to load sample data</div>
+                    <div className="w-full pt-4 text-lg text-negative-content">无法加载示例数据</div>
                   ) : null}
                 </SimpleCard>
               ) : ff.isFF(ff.FF_JSON_PREVIEW) ? (
                 <SimpleCard title="Expected input preview" className="w-[650px] h-full">
-                  Set up your{" "}
+                  设置你的{" "}
                   <button
                     type="button"
                     look="link"
                     onClick={openConfig}
                     className="border-none bg-none p-0 m-0 text-primary-content underline"
                   >
-                    labeling configuration
+                    标注配置
                   </button>{" "}
-                  to generate an input preview.
+                  来生成输入预览。
                 </SimpleCard>
               ) : null}
             </div>

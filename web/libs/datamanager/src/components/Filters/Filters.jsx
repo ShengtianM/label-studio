@@ -66,12 +66,12 @@ export const Filters = injector(({ views, currentView, filters }) => {
             />
           ))
         ) : (
-          <Elem name="empty">No filters applied</Elem>
+          <Elem name="empty">未应用任何过滤器</Elem>
         )}
       </Elem>
       <Elem name="actions">
         <Button type="primary" size="small" onClick={() => currentView.createFilter()} icon={<IconPlus />}>
-          Add {filters.length ? "Another Filter" : "Filter"}
+          添加 {filters.length ? "其他过滤器" : "过滤器"}
         </Button>
 
         {!sidebarEnabled ? (

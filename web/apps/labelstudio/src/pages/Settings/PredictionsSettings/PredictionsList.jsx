@@ -43,7 +43,7 @@ const VersionCard = ({ version, selected, onSelect, editable, onDelete }) => {
   const confirmDelete = useCallback(
     (version) => {
       confirm({
-        title: "Delete Predictions",
+        title: "删除预测算法或模型",
         body: "This action cannot be undone. Are you sure?",
         buttonLook: "destructive",
         onOk() {

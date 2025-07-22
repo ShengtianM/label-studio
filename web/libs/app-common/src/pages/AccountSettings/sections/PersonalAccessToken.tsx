@@ -60,7 +60,7 @@ export const PersonalAccessToken = () => {
               {tokenCopied ? "Copied!" : "Copy"}
             </Button>
             <Button look="danger" onClick={reset.mutate}>
-              Reset
+              重置
             </Button>
           </div>
         </div>
@@ -75,7 +75,7 @@ export const PersonalAccessToken = () => {
               value={curl}
             />
             <Button icon={<IconFileCopy />} onClick={copyCurl} disabled={curlCopied}>
-              {curlCopied ? "Copied!" : "Copy"}
+              {curlCopied ? "已复制" : "复制"}
             </Button>
           </div>
         </div>
@@ -87,13 +87,13 @@ export const PersonalAccessToken = () => {
 export function PersonalAccessTokenDescription() {
   return (
     <p className="m-0">
-      Authenticate with our API using your personal access token.
+      使用个人访问令牌通过 API 进行身份验证。
       {!window.APP_SETTINGS?.whitelabel_is_active && (
         <>
           {" "}
-          See{" "}
+          查看{" "}
           <a href="https://labelstud.io/guide/api.html" target="_blank" rel="noreferrer" className="inline-flex gap-1">
-            Docs{" "}
+            文档{" "}
             <span>
               <IconLaunch className="h-6 w-6" />
             </span>
