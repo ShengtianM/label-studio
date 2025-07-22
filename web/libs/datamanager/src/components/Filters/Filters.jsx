@@ -71,7 +71,7 @@ export const Filters = injector(({ views, currentView, filters }) => {
       </Elem>
       <Elem name="actions">
         <Button type="primary" size="small" onClick={() => currentView.createFilter()} icon={<IconPlus />}>
-          添加 {filters.length ? "其他过滤器" : "过滤器"}
+          6 添加 {filters.length ? "其他过滤器" : "过滤器"}
         </Button>
 
         {!sidebarEnabled ? (
