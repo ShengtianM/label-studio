@@ -1,6 +1,6 @@
-title: Question Answering
+title: 问答
 type: community
-group: Natural Language Processing
+group: 自然语言处理
 order: 1
 image: /static/templates/question-answering.png
 details: <h1>Select an answer from text</h1>

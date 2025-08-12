@@ -1,6 +1,6 @@
-title: Semantic Segmentation with Masks
+title: 使用掩码进行语义分割
 type: community
-group: Computer Vision
+group: 计算机视觉
 order: 2
 image: /static/templates/semantic-segmentation-with-masks.png
 details: <h1>Draw masks around the object with the brush tool</h1>

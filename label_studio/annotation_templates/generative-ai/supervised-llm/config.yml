@@ -1,6 +1,6 @@
-title: "Supervised Language Model Fine-tuning"
+title: "监督语言模型微调"
 type: community
-group: Generative AI
+group: 生成式AI
 order: 1
 image: /static/templates/generative-supervised-llm.png
 details: Collecting labeled text data for training an initial LLM, focusing on task-specific performance improvement. This stage involves gathering instructions and responses to adapt the base model to a wide range of tasks, enhancing its ability to generate more accurate and useful responses.

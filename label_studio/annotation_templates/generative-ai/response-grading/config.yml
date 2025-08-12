@@ -1,6 +1,6 @@
-title: LLM Response Grading
+title: 大模型响应评分
 type: community
-group: Generative AI
+group: 生成式AI
 order: 6
 image: /static/templates/response-grading.png
 details:  Assign a grade to LLM responses based on how well it meets your internal guidelines.

@@ -1,6 +1,6 @@
-title: Text Summarization
+title: 自动摘要
 type: community
-group: Natural Language Processing
+group: 自然语言处理
 image: /static/templates/text-summarization.png
 details: <h1>Provide one sentence summary</h1>
 config: |

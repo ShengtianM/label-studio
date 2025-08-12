@@ -1,6 +1,6 @@
-title: Response Selection
+title: 响应选择
 type: community
-group: Conversational AI
+group: 对话式AI
 image: /static/templates/response-selection.png
 details: <h1>Collect chatbot training data by selecting next dialogue response</h1>
 config: |

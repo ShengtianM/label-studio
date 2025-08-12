@@ -1,13 +1,13 @@
-title: Semantic Segmentation with Polygons
+title: 使用多边形进行语义分割
 type: community
-group: Computer Vision
+group: 计算机视觉
 order: 1
 image: /static/templates/semantic-segmentation-with-polygons.png
 details: <h1>Draw a polygon around object</h1>
 config: |
   <View>
 
-    <Header value="Select label and click the image to start"/>
+    <Header value="选择标签并单击图像开始"/>
     <Image name="image" value="$image" zoom="true"/>
 
     <PolygonLabels name="label" toName="image"
