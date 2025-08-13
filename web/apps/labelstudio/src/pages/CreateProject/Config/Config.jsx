@@ -279,13 +279,13 @@ const ConfigureColumn = ({ template, obj, columns }) => {
     const cols = (columns ?? []).map((col) => {
       return {
         value: col,
-        label: col === DEFAULT_COLUMN ? "<imported file>" : `$${col}`,
+        label: col === DEFAULT_COLUMN ? "<导入的文件>" : `$${col}`,
       };
     });
     if (!columns?.length) {
-      cols.push({ value, label: "<imported file>" });
+      cols.push({ value, label: "<导入的文件>" });
     }
-    cols.push({ value: "-", label: "<set manually>" });
+    cols.push({ value: "-", label: "<手动设置>" });
     return cols;
   }, [columns, DEFAULT_COLUMN, value]);
 
