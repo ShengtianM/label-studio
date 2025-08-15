@@ -31,9 +31,9 @@ export const StorageSet = ({ title, target, rootClass, buttonLabel }) => {
 
   const showStorageFormModal = useCallback(
     (storage) => {
-      const action = storage ? "Edit" : "Add";
-      const actionTarget = target === "export" ? "Target" : "Source";
-      const title = `${action} ${actionTarget} Storage`;
+      const action = storage ? "编辑" : "添加";
+      const actionTarget = target === "export" ? "目标" : "源";
+      const title = `${action}${actionTarget}存储`;
 
       const modalRef = modal({
         title,

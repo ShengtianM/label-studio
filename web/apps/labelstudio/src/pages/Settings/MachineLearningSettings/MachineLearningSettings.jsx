@@ -68,7 +68,7 @@ export const MachineLearningSettings = () => {
     (backend) => {
       const action = backend ? "updateMLBackend" : "addMLBackend";
       const modalProps = {
-        title: `${backend ? "Edit" : "Connect"} Model`,
+        title: `${backend ? "编辑" : "连接"}模型`,
         style: { width: 760 },
         closeOnClickOutside: false,
         body: (
