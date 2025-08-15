@@ -39,9 +39,9 @@ export const unsavedChangesModal = ({
   onDiscard,
   cancelText,
   discardText,
-  okText,
-  title = "You have unsaved changes.",
-  body = "Would you like to save them before leaving?",
+  okText = "保存并离开",
+  title = "你有未保存的更改。",
+  body = "你想在离开前保存它们吗？",
   ...props
 }: UnsavedChangesModalProps) => {
   let modalInstance: any = undefined;
@@ -64,7 +64,7 @@ export const unsavedChangesModal = ({
           size="compact"
           autoFocus
         >
-          {cancelText ?? "Cancel"}
+          {cancelText ?? "取消"}
         </Button>
 
         {onDiscard && (
@@ -76,7 +76,7 @@ export const unsavedChangesModal = ({
             size="compact"
             look="danger"
           >
-            {discardText ?? "Discard and leave"}
+            {discardText ?? "丢弃并离开"}
           </Button>
         )}
 
