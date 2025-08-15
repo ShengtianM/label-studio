@@ -27,7 +27,7 @@
     },
     {
       "title": "了解更多",
-      "content": "You can control access to specific projects and workspaces for internal team members and external annotators using Label Studio Enterprise.",
+      "content": "你可以使用 Label Studio Enterprise 控制内部团队成员和外部注释者对特定项目和工作区的访问。",
       "closable": true,
       "link": {
         "label": "了解更多",
@@ -39,11 +39,11 @@
       }
     },
     {
-      "title": "Labeling for GenAI",
-      "content": "Label Studio has templates available for supervised LLM fine-tuning, RAG retrieval ranking, RLHF, chatbot evaluation, and more.",
+      "title": "标注生成式AI",
+      "content": "Label Studio 提供可用于监督 LLM 微调、RAG 检索排名、RLHF、聊天机器人评估等的模板。",
       "closable": true,
       "link": {
-        "label": "Explore templates",
+        "label": "探索模板",
         "url": "https://labelstud.io/templates/gallery_generative_ai",
         "params": {
           "experiment": "project_creation_tip",
@@ -67,8 +67,8 @@
       }
     },
     {
-      "title": "Want to simplify and secure logging in?",
-      "content": "Enable Single Sign-On for your team using SAML, SCIM2 or LDAP with Label Studio Enterprise.",
+      "title": "想要简化并保护登录？",
+      "content": "使用 SAML、SCIM2 或 LDAP 和 Label Studio Enterprise 为您的团队启用单点登录。",
       "closable": true,
       "link": {
         "label": "了解更多",
@@ -81,7 +81,7 @@
     },
     {
       "title": "了解更多",
-      "content": "Label Studio now has a Starter Cloud offering optimized for small teams and projects.",
+      "content": "Label Studio 现在拥有针对小型团队和项目优化的 Starter Cloud 产品。",
       "link": {
         "label": "了解更多",
         "url": "https://humansignal.com/pricing/",
@@ -120,8 +120,8 @@
   ],
   "projectSettings": [
     {
-      "title": "Save time with Auto-Labeling",
-      "content": "Use automation to instantly label large-scale datasets without sacrificing quality in the Enterprise platform.",
+      "title": "通过自动标注节省时间",
+      "content": "使用自动化即时标记大规模数据集，而不会牺牲企业平台的质量。",
       "closable": true,
       "link": {
         "label": "Learn more",
@@ -134,7 +134,7 @@
     },
     {
       "title": "了解更多",
-      "content": "Try Label Studio Starter Cloud, optimized for small teams and projects.",
+      "content": "试试 Label Studio Starter Cloud，它针对小型团队和项目进行了优化。",
       "closable": true,
       "link": {
         "label": "了解更多",
@@ -146,8 +146,8 @@
       }
     },
     {
-      "title": "Evaluate GenAI models",
-      "content": "Combine automation plus human supervision to evaluate and ensure LLM quality in the Enterprise platform.",
+      "title": "评估生成式AI模型",
+      "content": "将自动化与人工监督相结合，以评估和确保企业平台中的 LLM 质量。",
       "closable": true,
       "link": {
         "label": "Learn more",
@@ -160,10 +160,10 @@
     },
     {
       "title": "了解更多",
-      "content": "You can connect ML models using the backend SDK to save time with pre-labeling or active learning.",
+      "content": "你可以使用后端 SDK 连接 ML 模型，以节省预标注或主动学习的时间。",
       "closable": true,
       "link": {
-        "label": "Learn more",
+        "label": "了解更多",
         "url": "https://labelstud.io/guide/ml",
         "params": {
           "experiment": "project_settings_tip",
@@ -174,8 +174,8 @@
   ],
   "authPage": [
     {
-      "title": "Auto-labeling with Prompts",
-      "description": "Use LLMs to instantly pre-label thousands of tasks with accurate predictions.",
+      "title": "基于提示词自动标注",
+      "description": "使用 LLM 通过准确的预测即时预先标注数千个任务。",
       "link": {
         "label": "Learn more",
         "url": "https://docs.humansignal.com/guide/prompts_overview",
@@ -186,8 +186,8 @@
       }
     },
     {
-      "title": "Evaluate and compare LLMs",
-      "description": "Compare accuracy, cost, and performance on your tasks with Label Studio Prompts.",
+      "title": "评估和比较大模型",
+      "description": "使用 Label Studio 提示词比较任务的准确性、成本和性能。",
       "link": {
         "label": "Learn more",
         "url": "https://docs.humansignal.com/guide/prompts_overview",
@@ -199,7 +199,7 @@
     },
     {
       "title": "新特性",
-      "description": "You can now label multi-page documents like PDFs.",
+      "description": "你现在可以标记 PDF 等多页文档。",
       "link": {
         "label": "Learn more",
         "url": "https://labelstud.io/templates/multi-page-document-annotation",
@@ -211,7 +211,7 @@
     },
     {
       "title": "企业级特性",
-      "description": "Save time by labeling many tasks at once with Bulk Labeling",
+      "description": "使用批量标注一次标注多个任务，从而节省时间",
       "link": {
         "label": "了解更多",
         "url": "https://docs.humansignal.com/guide/labeling.html#Bulk-labeling",
@@ -223,7 +223,7 @@
     },
     {
       "title": "了解更多",
-      "description": "Try Label Studio Starter Cloud, optimized for small teams and projects.",
+      "description": "试试 Label Studio Starter Cloud，它针对小型团队和项目进行了优化。",
       "link": {
         "label": "了解更多",
         "url": "https://humansignal.com/pricing/",
@@ -235,7 +235,7 @@
     },
     {
       "title": "了解更多",
-      "description": "There's an Enterprise version of Label Studio packed with more features and automation to label data faster while ensuring the highest quality.",
+      "description": "Label Studio 的企业版包含更多功能和自动化功能，可以更快地标记数据，同时确保最高质量。",
       "link": {
         "label": "了解更多",
         "url": "https://humansignal.com/goenterprise/",
