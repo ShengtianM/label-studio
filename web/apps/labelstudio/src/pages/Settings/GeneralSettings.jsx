@@ -123,6 +123,6 @@ export const GeneralSettings = () => {
   );
 };
 
-GeneralSettings.menuItem = "General";
+GeneralSettings.menuItem = "基础设置";
 GeneralSettings.path = "/";
 GeneralSettings.exact = true;
