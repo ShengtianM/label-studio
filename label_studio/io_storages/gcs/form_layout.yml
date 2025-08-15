@@ -5,11 +5,11 @@ title_bucket_prefix: &title_bucket_prefix
     label: Storage Title
   - type: text
     name: bucket
-    label: Bucket Name
+    label: Bucket名称
     required: true
   - type: text
     name: prefix
-    label: Bucket Prefix
+    label: Bucket前缀
 
 gcs_credentials: &gcs_credentials
   - type: password

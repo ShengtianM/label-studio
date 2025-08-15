@@ -2,7 +2,7 @@
 title_container_prefix: &title_container_prefix
   - type: text
     name: title
-    label: Storage Title
+    label: 存储标题
   - type: text
     name: container
     label: Container Name
@@ -53,13 +53,13 @@ ImportStorage:
         fields:
           - type: toggle
             name: use_blob_urls
-            label: Treat every bucket object as a source file
+            label: 将每个bucket对象视为一个源文件
             description: If unchecked, treat every bucket object as a JSON-formatted task
       - width: 600
         fields:
           - type: toggle
             name: presign
-            label: "Use pre-signed URLs (On)\n Proxy through Label Studio (Off)"
+            label: "使用预签名URL（开启）\n通过Label Studio代理（关闭）"
             description: "When pre-signed URLs are enabled, all data bypasses Label Studio and user browsers directly read data from storage"
             value: true
           - type: counter

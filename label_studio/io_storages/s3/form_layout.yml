@@ -2,20 +2,20 @@
 title_bucket_prefix: &title_bucket_prefix
   - type: text
     name: title
-    label: Storage Title
+    label: 存储标题
   - type: text
     name: bucket
-    label: Bucket Name
+    label: Bucket名称
     required: true
   - type: text
     name: prefix
-    label: Bucket Prefix
+    label: Bucket前缀
 
 # 2x3 grid
 aws_params_import: &aws_params_import
   - type: text
     name: region_name
-    label: Region Name
+    label: 地区名称
     placeholder: us-east-1
   - type: text
     name: s3_endpoint
@@ -47,7 +47,7 @@ aws_params_import: &aws_params_import
 aws_params_export: &aws_params_export
   - type: text
     name: region_name
-    label: Region Name
+    label: 地区名称
     placeholder: us-east-1
   - type: text
     name: s3_endpoint
@@ -87,7 +87,7 @@ ImportStorage:
     fields:
       - type: text
         name: regex_filter
-        label: File Filter Regex
+        label: 文件过滤正则表达式
         placeholder: '.*csv or .*(jpe?g|png|tiff) or .\w+-\d+.text'
         validators:
           - regexp
@@ -102,23 +102,23 @@ ImportStorage:
         fields:
           - type: toggle
             name: use_blob_urls
-            label: Treat every bucket object as a source file
-            description: If unchecked, treat every bucket object as a JSON-formatted task
+            label: 将每个bucket对象视为一个源文件
+            description: 如果不勾选此项，则将每个bucket对象视为JSON格式的任务
       - fields:
           - type: toggle
             name: recursive_scan
-            label: Recursive scan
-            description: Perform recursive scan over the bucket content
+            label: 递归扫描
+            description: 对bucket内容进行递归扫描
       - fields:
           - type: toggle
             name: presign
-            label: "Use pre-signed URLs (On)\n Proxy through Label Studio (Off)"
-            description: "When pre-signed URLs are enabled, all data bypasses Label Studio and user browsers directly read data from storage"
+            label: "使用预签名URL（开启）\n通过Label Studio代理（关闭）"
+            description: "当启用预签名URL时，所有数据都会绕过Label Studio，用户浏览器会直接从存储中读取数据"
             value: true
       - fields:
           - type: counter
             name: presign_ttl
-            label: Expiration minutes
+            label: 到期分钟数
             min: 1
             value: 15
             dependency: presign
@@ -135,5 +135,5 @@ ExportStorage:
         fields:
           - type: toggle
             name: can_delete_objects
-            label: Can delete objects from storage
-            description: If unchecked, annotations will not be deleted from storage
+            label: 可以从存储中删除对象
+            description: 如果不勾选，则不会从存储中删除注释
